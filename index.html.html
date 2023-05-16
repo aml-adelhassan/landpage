@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>law4arabs</title>
+<!-- Font Awesome Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+
+<style>
+
+/* Start Variables */
+:root {
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s;
+  }
+  /* End Variables */
+  html {
+    scroll-behavior: smooth
+  }
+  body {
+overflow: hidden;
+font-family: fantasy;
+margin: 0;
+font-size: 28px;
+direction: rtl;
+background-color: #e5d8eb;
+text-align: center;
+}
+ 
+h2{
+  font-size: 40px;
+  font-family: cursive;
+  padding-right: 70px; 
+  padding-left: 70px
+}
+
+#navbar {
+overflow: hidden;
+background: #edc0ff;
+color: black;
+position: relative;
+top: -55px;
+}
+
+#navbar a {
+  color: black;
+  text-align: center;
+  padding:14px 16px;
+  text-decoration: none;
+  position: relative;
+}
+
+#navbar a:hover {background-color: rgb(201, 140, 151);}
+
+.header{
+    background-image: url('https://cdn.sotor.com/thumbs/fit630x300/52468/1598426378/%D9%85%D8%A7%D8%B0%D8%A7_%D9%8A%D8%B9%D9%86%D9%8A_%D8%AA%D8%B7%D8%A8%D9%8A%D9%82_%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%A7%D9%84%D8%AF%D9%81%D8%A7%D8%B9_%D9%88%D9%81%D9%82%D9%8B%D8%A7_%D9%84%D9%84%D8%AF%D8%B3%D8%AA%D9%88%D8%B1_%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86%D9%8A.jpg');
+    text-align: center;
+    background-size: cover;
+    position: relative;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 8em;
+    top: -57px;
+}
+
+  .land-text{
+    text-align: center;
+    max-width: 100%; 
+    line-height: .3;
+    padding: 12px;
+    margin: 20px;
+  }
+
+  .land-text h2{font-family: fantasy;font-weight: bold;font-size: 65px;color:white;}
+
+   .land-text p{
+    font-size: 70px;
+    color: white;
+    font-family: fantasy;
+    padding: 0;  }
+
+/* Start about */
+.about{top: -60px;position: relative;}
+.about h2 {font-size: 40px;margin: 80px 0 10px}
+.about .slider > div {display: none}
+.about .slider .active { display: block}
+
+/* End about */
+
+ .privacy{
+  padding: 10px 35px;
+ }
+ hr{
+  border: 2px solid;
+  width: 50%;
+  background: #b26bc3;
+ text-align: center;
+box-shadow: 0 8px 0px rgb(0 0 0 / 53%);
+}
+
+button{
+  font-size: 20px;
+  padding: 15px 25px;
+  background: #edc0ff
+}
+button:hover{
+  font-size: 25px;
+  border: 3px solid gray;
+}
+
+/* Start Contact */
+.contact {
+  padding-top: 20px;
+  background-color:#cdbbd5
+}
+
+.contact .info .label {
+  font-size: 35px;
+  font-weight: 800;
+  color:#888;
+  margin-bottom: 15px;
+}
+.contact .info .link {
+  display: block;
+  font-size: 35px;
+  font-weight: 800;
+  color:#999;
+  text-decoration: none;
+}
+.contact .info .social {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+ color: #777;
+}
+.contact .info .social i {
+  margin-left: 10px;
+  color: var(--secondary-color);
+}
+
+/* End Contact */
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {background-color: #45a049}
+
+.container {
+  border-radius: 5px;
+  background-color: #e5d8eb;
+  padding: 20px;
+}
+
+/*articles*/
+.articles{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+.articles .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr) );
+  gap: 30px;
+  justify-content: center;
+  background: url("http://elezabylawfirm.com/lawyeradmin/app/upload/221607853408.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.articles .box {
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  background-color: #f6f6f6;
+  border-radius: 7px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  justify-content: center}
+
+.articles .box:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 20%)}
+
+.container .box .content{padding: 20px;}
+.container .box .content h3 {margin: 0}
+.container .box .content p{margin: 10px 0 0;line-height: 1.5;color: #777;}
+.container .box .info{
+  padding: 20px;
+  border-top: 1px solid #E6E6E7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.articles .box:hover .info i{animation: moving-arrow 0.6s linear infinite;}
+
+/*animation*/
+@keyframes left-move{
+  50%{
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100%{
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+@keyframes right-move{
+  50%{
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100%{
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes moving-arrow {
+  100%{
+    transform:translatex(10px);
+  }
+  
+}
+
+/*end of animation*/
+
+.main-title{
+  margin: 0 auto 80px;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 30px;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+.main-title::before,
+.main-title::after{
+content: "";
+width: 12px;
+height: 12px;
+background-color:#8d5b9c;
+position: absolute;
+border-radius: 50%;
+top: 50%;
+transform: translateY(-50%);
+}
+.main-title::before{left: -30px;}
+.main-title::after{right: -30px;}
+.main-title:hover::before{z-index: -1;animation: left-move 0.5s linear forwards ;}
+.main-title:hover::after{z-index: -1;animation: right-move 0.5s linear forwards ;}
+
+.main-title:hover{
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.5s;
+}
+
+form {width: 50%;position: relative;right: 25%;}
+
+.footer{
+  font-size: 20px;
+    height: 30px;
+    color: black;
+    background-color: #f0c0ff;
+    text-align: center;
+    position: relative;
+}
+
+
+#button {
+  display: inline-block;
+  background-color: #8d5b9c;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius:50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#box1 , #box2 , #box3 {
+  display:none
+}
+
+#readMore {
+    display: none;
+}
+
+/*media queries*/
+
+/* Small */
+
+@media (max-width: 767px) {
+.contact .info .label,
+.contact .info .link {
+  font-size: 20px;
+  padding: 14px;
+}
+  .special-heading {
+    font-size: 45px;
+  }
+  .special-heading + p {
+    padding: 15px;
+    margin-top: -70px;  }
+}
+  
+@media only screen and (max-width: 600px) {
+  #navbar{
+    font-size: 7px;
+    height: 20px;
+    }
+    #navbar a{
+  font-size: 13px;
+    padding: 3px;
+}
+.privacy {
+text-align: right;
+   }
+
+   .land-text h2{
+  font-size: 32px;
+  padding-top: 28px;
+}
+
+   form{
+     text-align: center;
+     width: 100%;
+     right: 0;
+    }
+ form label{
+   text-align: right;
+ }
+
+}
+
+@media only screen and (width:768px) {
+  
+    #navbar a{
+  font-size: 24px;
+    padding: 3px;
+}
+#navbar{
+  height:40px;
+}
+}
+
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  } 
+ 
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/*special heading*/
+@media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation:landscape) 
+{
+  .special-heading {
+    color: #d9cee3;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -4px;
+    margin: 0;
+  }
+  .special-heading + p {
+    margin: -45px;
+        font-size: 42px;
+    color: #797979;
+    position: absolute;
+    right: 30%;
+  }
+}
+
+
+</style>
+
+</head>
+
+<body>
+  <a id="button"></a>
+
+
+    <div class="header">
+            <div class="land-text">
+        <h2>قانون العرب</h2>
+        <p>Low4Arabs</p>
+        </div>
+        </div>
+        
+        <div id="navbar">
+        <a href="javascript:void(0)">الرئيسية</a>
+        <a data-value="test" href="javascript:void(0)">من نحن</a>
+        <a data-value="articles" href="javascript:void(0)">المقالات الشائعة</a>
+        <a data-value="new" href="javascript:void(0)">أحدث المقالات</a>
+        <a data-value="pri" href="javascript:void(0)">سياسة الخصوصية</a>
+        <a data-value="cont" href="javascript:void(0)">تواصل معنا</a>
+      </div>
+    
+ <!-- Start about -->
+        
+ <div id="test" class="about">
+      <div class="container">
+          <h2>من نحن  About Us </h2>
+          <div class="slider">
+              <div class="active">
+                  <p>
+                    اعرفكم بنفسي اعزائي القراء الكرام
+                    أنا عادل المشهور، مارست مهنة القانون لمدة تتجاوز ال35 عا منذ عام 1983م. 
+                    فقد عملت في 3 جهات حكومية بالإضافة إلى ممارسة العمل القانوني كمهنة حرة.
+                    واستطعت بخبرتي الطويلة ملاحظة عطش الكثيرون وخاصةً الموظفين فقد عملت في 3 جهات حكومية </p>
+              </div>
+              <div>
+                <p> ممارسة العمل القانوني كمهنة حرة.
+                  >واستطعت بخبرتي الطويلة ملاحظة عطش الكثيرون وخاصةً الموظفين في الحكومة وقطاع الأعمال و
+                    فقد عملت في 3 جهات حكومية </p>
+              </div>
+              <div>
+                <p>
+                العمل القانوني كمهنة حرة.
+                  >واستطعت بخبرتي الطويلة ملاحظة عطش الكثيرون وخاصةً الموظفين في الحكومة وقطاع الأعمال و
+                    فقد عملت في 3 جهات حكومية </p>
+              </div>
+              <div>
+                <p>
+                  ا حرة.
+                  >واستطعت بخبرتي الطويلة ملاحظة عطش الكثيرون وخاصةً الموظفين في الحكومة وقطاع الأعمال و
+                    فقد عملت في 3 جهات حكومية </p>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- End about -->
+
+<hr>
+<div class="articles" id="articles">
+<h2 class="main-title">المقــالات الأكثر شيوعــًا</h2>
+<div class="container">
+
+<div class="box">
+  <div class="content">
+    <h3>مقال 1</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box">
+  <div class="content">
+    <h3>مقال 2</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box">
+  <div class="content">
+    <h3>مقال 3</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box">
+  <div class="content">
+    <h3>مقال 4</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+<div class="box" id="box1">
+  <div class="content">
+    <h3>مقال 5</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box" id="box2">
+  <div class="content">
+    <h3>مقال 6</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box" id="box3">
+  <div class="content">
+    <h3>مقال 7</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+</div>
+<button style="border-radius: 50%;">تابع المزيد من المقالات</button>
+
+</div>
+
+
+
+<div class="articles" id="new">
+<h2 class="main-title">أحدث المقــالات</h2>
+<div class="container">
+<div class="box">
+  <div class="content">
+    <h3>مقال 1</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box">
+  <div class="content">
+    <h3>مقال 2</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box">
+  <div class="content">
+    <h3>مقال 3</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box">
+  <div class="content">
+    <h3>مقال 4</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+ 
+</div>
+</div>
+
+ <hr>
+
+<div id="pri" class="privacy">
+
+  <h2>سياسة الخصوصية  privacy policy </h2>
+<p>بسم الله الرحمن الرحيم 
+  سياسة الخصوصية قانون العرب:
+إذا كنت بحاجة إلى المزيد من المعلومات أو لديك أية اسئلة حول سياسة الخصوصية 
+لا تتردد في التواصل معنا عبر البريد الإلكتروني: law4arabs@gmail.com...   فقد عملت في 3 جهات حكومية بالإضافة إلى ممارسة العمل القانوني كمهنة حرة.
+ <span id="readLess">. . . </span> <span id="readMore"> في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+</span>
+</p>
+<button onclick="readMore()" id="morebtn" style="border-radius: 50%; margin-bottom:40px;">اكمل القراءة</button>
+
+
+<!-- Start Contact -->
+<div id="cont" class="contact">
+  <div class="container2">
+    <h2 class="special-heading">Contact</h2>
+    <p>لــديك استفســار؟..</p>
+    <div class="info">
+      <p class="label">لا تتردد في التواصل معنا عبر:</p>
+      <p class="label">Feel free to drop us a line at</p>
+
+      <a class="link"> law4arabs@gmail.com</a>
+      <div class="social">
+        تواصل معنا عبر فيسبوك : 
+       <a href="https://www.facebook.com/law4arabs/"><i class="fab fa-facebook-f"></i></a> 
+      
+      </div>
+      <h3 style="position: relative;text-align: center;">اتــرك لنا رسالتك</h3>
+
+      <div class="container">
+        <form action="/action_page.php">
+          <input type="text" id="fname" name="firstname" placeholder="الاسم الأول..">
+          <input type="text" id="lname" name="lastname" placeholder="اسم العائلة..">
+      
+         
+        <select id="country" name="country">
+            <option value="egypt">مصر</option>
+            <option value="sudia">السعودية</option>
+            <option value="kweit">الكويت</option>
+          </select>
+                <textarea id="subject" name="subject" placeholder="اكتب رسالتك.." style="height:200px"></textarea>
+    
+          <input type="submit" value="إرسال">
+        </form>
+      </div>
+      
+  
+    </div>
+  </div>
+</div>
+<!-- End Contact -->
+
+<!-- Start Footer -->
+<div class="footer">&copy; 2021 <span style="font-size: 20px;">AML</span> All Right Reserved</div>
+<!-- End Footer -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+
+<script>
+function readMore() {
+    let readLess = document.getElementById("readLess");
+    let readMore = document.getElementById("readMore");
+    let moreBtn = document.getElementById("morebtn");
+
+    if (readLess.style.display === "none") {
+        readLess.style.display = "inline";
+        moreBtn.innerHTML = "اكمل القراءة";
+        readMore.style.display = "none";
+    } else {
+        readLess.style.display = "none";
+        moreBtn.innerHTML = "اقرأ أقل";
+        readMore.style.display = "inline";
+    }
+}
+ // Auto Slider Code
+    
+ (function autoSlider() {
+        
+        $('.slider .active').each(function () {
+           
+            if (!$(this).is(':last-child')) {
+                
+                $(this).delay(3000).fadeOut(1000, function () {
+                   
+                    $(this).removeClass('active').next().addClass('active').fadeIn();
+                    
+                    autoSlider();
+                    
+                });
+                
+            } else {
+                
+                $(this).delay(3000).fadeOut(1000, function () {
+                    
+                    $(this).removeClass('active');
+                    
+                    $('.slider div').eq(0).addClass('active').fadeIn();
+                    
+                    autoSlider();
+                    
+                });
+                
+            }
+            
+        });
+        
+    }());
+    
+
+    // Smooth Scroll To Div 
+    
+    $('#navbar a ').click(function () {
+       
+        $('html, body').animate({
+            
+            scrollTop: $('#' + $(this).data('value')).offset().top
+            
+        }, 1000);
+        
+        console.log('#' + $(this).data('value'));
+        
+    });
+
+ // Trigger Nice Scroll
+    
+ $('html').niceScroll({
+        
+        cursorcolor: 'black',
+        
+        cursorwidth: '10px',
+        
+        cursorborder: '1px solid black',
+        
+        cursorborderradius: 0
+        
+    });
+  
+//scroll to top button
+
+var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+//read more button
+          $(document).ready(function(){
+            $("button").click(function(){
+              $("#box1").fadeIn();
+              $("#box2").fadeIn("slow");
+              $("#box3").fadeIn(3000);
+            });
+          });
+          </script>
+</body>
+</html>
